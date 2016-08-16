@@ -1,0 +1,12 @@
+//SNIPPETS DON'T REQUIRE ENDING PHP TAG
+<?php
+$cookie_name = "dfCookie";
+$cookie_value = "true";
+if($_GET['dfLogout'] == 1) {
+    setcookie($cookie_name,$cookie_value,time()-1);
+    session_destroy();
+}
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && $_POST["service"] == 'login'){
+    session_start();    
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 1), "/family-tree/modx/"); // 86400 = 1 day
+}
