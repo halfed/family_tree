@@ -1,0 +1,625 @@
+/*-- DEFAULT GLOBAL STYLES --*/
+html body {
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background: #FFF; /*url("../../assets/images/concrete.png") top right;*/
+}
+* {
+    padding:0px;
+    margin:0px; 
+}
+
+.clearfix {
+	clear: both;
+}
+
+.hidden {
+        display: none;
+}
+/*---------------  MODIFY THE DEFAULT WIDTH OF FOUNDATION'S ROW --------------------*/
+.row {
+    max-width: 75.001rem;
+}
+
+#members-container {
+	width: 100%;
+	/*min-height: 300px;*/
+	margin: 0 auto;
+	/*background-color: #F7F6F2;*/
+	overflow-x: scroll;
+    white-space: nowrap;
+    background: -webkit-linear-gradient(#F7F6F2 30%, #DCE6E7 50%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F7F6F2 30%, #DCE6E7 50%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F7F6F2 30%, #DCE6E7 50%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F7F6F2 30%, #DCE6E7 50%); /* Standard syntax (must be last) */
+}
+
+#family-container {
+    text-align: center;
+}
+
+/*---- MEMBER CONTAINER ---- */
+.content-top {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 16px;
+    position: relative;
+    top: 6px;
+    width: 65px;
+    z-index: 1;
+}
+
+.born-to-family {
+    background-color: #FF002A;
+}
+
+.married {
+    background-color: #557FFF;
+}
+
+.male {
+    background-color: #a1c3e7;
+}
+
+.female {
+    background-color: #EE4A93;
+}
+
+.content-top.content-top-single-parent {
+    width: 64px;
+    left: 11px;
+}
+
+.content {
+    background-color: #4e4e4b;
+    border: 1px solid #000;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 2px solid #fff;
+    border-left: 1px solid black;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    /*height: 135px;*/
+    height: auto;
+    position: relative;
+    top: -1px;
+    width: 65px;
+    z-index: 2;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.content a:link {
+    text-decoration: none;
+}
+
+.content.content-single-parent {
+    width: 64px;
+}
+
+.member-image-display {
+    /*background-image: url("../../assets/images/small-images/image-placeholder-small.jpg");*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 5px;
+    /*height: 65px;*/
+    height: 79px;
+    margin: 10px auto;
+    width: 55px;
+}
+.member-name {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 5px;
+}
+.content-bottom {
+    background-color: #4e4e4b;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    height: 10px;
+    position: relative;
+    top: -6px;
+    width: 65px;
+    z-index: 1; 
+}
+
+.content-bottom.content-bottom-single-parent {
+    width: 64px;
+    left: 11px;
+}
+
+/*---- END MEMBER CONTAINER --*/
+
+
+.individual-member-container, .individual-member-child-container {
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 11px;
+    margin: 20px 5px;
+    display: inline-block;
+}
+
+.individual-member-container {
+    margin: 20px 5px;
+    background-color: #F7F6F2;
+    position: relative;
+}
+
+.individual-member-child-container {
+    margin: 0 5px 20px;
+    background-color: #F7F6F2;
+    position: relative;
+}
+
+.individual-member {
+    /*border: 1px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    
+    text-align: center;
+    width: 70px;
+    
+    background-color: #F19E00;
+    font-weight: 600;*/
+    padding: 2px;
+    display: inline-block;
+}
+
+.individual-member.individual-member-single-parent {
+    width: 90px;
+}
+
+.memberImage {
+    display:none;
+}
+
+.member-image {
+	float: left;
+	margin-right: 10px;
+}
+
+.member-info {
+	float: left;
+}
+
+.member-inputs {
+    margin: 5px 0 0 0;
+    padding: 12px 0 12px 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+.member-inputs p {
+    margin-bottom: 0px;
+}
+
+.searchResults {
+    margin-left: 13px;
+}
+
+.member-result .individual-member {
+    padding: 0px 2px 2px 2px;
+}
+
+.member-result .content-bottom {
+    top: -8px;
+}
+
+.member-result .content {
+    z-index: 0;
+    top: 1px;
+}
+
+/*--------------------------- BUTTONS ----------------------------------*/
+.columns .button, input.button, .button[disabled] {
+    background-color: #573939;
+    color: #FFF;
+}
+.button:hover, input.button:hover {
+    background-color: #8D4141;
+}
+.backButton {
+    color: #000;
+    text-decoration: underline;
+}
+/*--------------------------  END BUTTONS ------------------------------*/
+
+a:link {
+    color: #000;
+    text-decoration: underline;
+}
+a:visited {
+    color: #000;
+}
+a:hover {
+    color: #000;
+}
+a:active {
+    color: #000;
+}
+
+.action-link:link {
+    color: #008cba;
+}
+
+.action-link:visited {
+    color: #008cba;
+}
+
+.action-link:hover {
+    color: #00AAFF;
+}
+
+.action-link:active {
+    color: #00AAFF;
+}
+
+span.error, small.error {
+    padding:0;
+    margin-bottom: 0.25rem;
+}
+
+input.error, textarea.error, select.error {
+    margin-bottom: 15px;
+}
+
+.success {
+    color: #4F8A10;
+    text-align: center;
+}
+
+/*-------------------------- SPACING IN MARGINS ------------------------*/
+.xs-margin-top {
+    margin-top: 5px;
+}
+.s-margin-top {
+    margin-top: 10px;
+}
+.m-margin-top {
+    margin-top: 15px;
+}
+.l-margin-top {
+    margin-top: 20px;
+}
+
+.l-margin-right {
+    margin-right: 20px;
+}
+
+.element-float-left {
+    float: left;
+}
+
+.element-float-right {
+    float: right;
+}
+
+.bottom-divider {
+    border-bottom: 1px solid #000;
+}
+
+/*------------------------- FONT SIZES  ------------------------------------*/
+
+h2 {
+    font-size: 1.37555rem;
+}
+
+.x-small {
+    font-size: 0.6888rem;
+}
+
+.fontBold {
+    font-weight: 600;
+}
+
+.el-small {
+    font-size: 14px;
+    line-height: 0.03;
+}
+
+.top-bar a {
+    color: #008cba;
+    font-size: 1.0625rem;
+    text-decoration: underline;
+}
+
+.top-bar a:hover {
+    color: #00AAFF;
+}
+
+/*----------------------- FORM MESSAGES CONTAINER ----------------------*/
+
+.loginMessage {
+  padding-top: 30px;
+  margin-left: 20px;
+}
+
+
+/*----------------------- ERROR MESSAGES AND NOTIFICATION MESSAGES -----------------------*/
+
+.error {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.error-txt {
+    color: #FF0000;
+    background-color: #000;
+}
+
+.disclaimer {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.disclaimer-red {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.requirement-small {
+    font-size: 10px;
+}
+
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('../images/small-images/black-spinner.gif') center no-repeat #000;
+	opacity: 0.6;
+	display:none;
+}
+
+/*----------------------- END DEFAULT GLOBAL STYLES -------------------------------------*/
+
+/*----------------------- TEMPLATE PAGE -------------------------------------------*/
+#f-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+#topBanner {
+    background-image: url("../../assets/images/familybanner.jpg");
+    width: 1200px;
+    min-height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    #topBanner {
+        width:100%;
+        min-height: 171px;
+    }
+}
+
+@media (max-width: 770px) {
+    #topBanner {
+        min-height: 130px;
+    }
+}
+
+/*------------------------------------------------- TEMPLATE NAVIGATION -----------------------------------------------*/
+.top-bar {
+    background: #FFF;
+    text-align: center;
+}
+
+.top-bar a {
+    margin-left: 15px;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+    background: #FFF;
+    color: #333333;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+    background: #F7F6F2;
+}
+
+#navLinks {
+    height: 50px;
+    margin: 0 auto;
+}
+
+/*----------------------------------------- END TEMPLATE PAGE ---------------------------------------------*/
+
+/*-- FOOTER CHUNK  --*/
+#footer {
+    margin-left: 20px;
+}
+/*-- END FOOTER CHUNK --*/
+
+/*-- SIGN IN PAGE --*/
+#logIn {
+    width:900px;
+    color: #000;
+    background-color: #FFF;
+}
+
+#logIn fieldset legend {
+    background-color: transparent;
+}
+/*-- END SIGN IN PAGE --*/
+#formContainer {
+    /*width:900px;*/
+    color: #000;
+    background-color: #FFF;
+}
+
+/*--- TRIANGLE ----- */
+/**
+ * How to make 3-corner-rounded triangle in CSS (SO)
+ * http://stackoverflow.com/q/14446677/1397351
+ */
+.triangle {
+   position: relative;
+   background-color: #000;
+   text-align: right;
+   left: 3px;
+   top: 10px;
+   margin: auto;
+}
+.triangle:before,
+.triangle:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.triangle,
+.triangle:before,
+.triangle:after {
+	width:  1em;
+	height: 1em;
+	border-top-right-radius: 30%;
+}
+
+.triangle {
+	transform: rotate(0deg) skewX(-30deg) scale(1,.866);
+}
+.triangle:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+.triangle:hover {
+    background-color: #008cba;
+}
+
+.seeMore {
+    position: absolute;
+    margin: auto;
+    width: 140px;
+    margin-top: -17px;
+    display: none;
+}
+
+.seeMore-single-parent {
+    width: 90px;
+}
+
+.inputfile {
+	width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile-6 + label {
+	    border: 1px solid #8D4141;
+    background-color: #FFF;
+    padding: 0;
+    color: #000;
+
+    max-width: 100%;
+    font-size: 1.25rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.inputLabel span {
+	    width: 200px;
+    min-height: 2em;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+    padding: 0rem 1.25rem;
+    line-height: 39px;
+}
+
+.inputLabel strong {
+	height: 100%;
+    color: #f1e5e6;
+    background-color: #573939;
+    display: inline-block;
+    padding: 0.6rem 0.5rem;
+}
+
+.checkbox-label span{
+    line-height: 1.3;
+    vertical-align: top;
+}
+
+#memberPhoto {
+    display:none;
+    margin: 10px 0;
+}
+
+.photo-upload {
+    display: none;
+	margin: 10px 0;
+	height: 430px;
+    width: 370px;
+}
+
+.submit {
+	display: block;
+}
+
+.center {
+    text-align:center;
+}
+
+.row.divider-container {
+    margin-bottom: 20px;
+}
+
+.member-results-container{
+    margin-top: 30px;
+    display: none;
+}
+
+.member-results-box {
+    line-height: 42.2px;
+}
+
+.register-continue {
+    display: none;
+}
+
+.member-results-body .continue-register, .profile-results .continue-register {
+    color: #008cba;
+}
+
+.member-results-body .continue-register:hover, .profile-results .continue-register:hover {
+    color: #00AAFF;
+}
+
+#memberPhoto {
+    transform-origin: top left; /* IE 10+, Firefox, etc. */
+    -webkit-transform-origin: top left; /* Chrome */
+    -ms-transform-origin: top left; /* IE 9 */
+}
+#memberPhoto.rotate90 {
+    transform: rotate(90deg) translateY(-100%);
+    -webkit-transform: rotate(90deg) translateY(-100%);
+    -ms-transform: rotate(90deg) translateY(-100%);
+}
+#memberPhoto.rotate180 {
+    transform: rotate(180deg) translate(-100%,-100%);
+    -webkit-transform: rotate(180deg) translate(-100%,-100%);
+    -ms-transform: rotate(180deg) translateX(-100%,-100%);
+}
+#memberPhoto.rotate270 {
+    transform: rotate(270deg) translateX(-100%);
+    -webkit-transform: rotate(270deg) translateX(-100%);
+    -ms-transform: rotate(270deg) translateX(-100%);
+}
