@@ -1,0 +1,29 @@
+<!-- "!" un-caches on call -->
+[[!check_session]]
+[[!insert_member]]
+
+[[!FormIt?
+   &submitVar=`change-profile`
+   &redirectTo=`2`
+   &validate=`firstName:required:regexp=^/[a-zA-Z]/^,
+      lastName:required:regexp=^/[a-zA-Z]/^,
+      dobDay:required:minLength=`1`,
+      dobMonth:required:minLength=`1`,
+      dobYear:required:minLength=`1`,
+      memberGeneration:required:isNumber,
+      email:required:email,
+      photo:validateUpload=^1^`
+   &customValidators=`validateUpload`
+   &reloadOnSuccess = `0`
+   &successMessagePlaceholder=`fi.successMessage`
+   &successMessage = `The member's profile you have updated has been successfully changed`
+   ]]
+<!-- WE MIGHT NEED THIS ONE DAY
+dobDay:required:minLength=`1`,
+      dobMonth:required:minLength=^1^,
+      dobYear:required:minLength=`1`, -->
+
+
+[[!+fi.successMessage:notempty=`<div class="row"><div class="small-8 small-centered columns"><p class="success">[[+fi.successMessage]]</p></div></div>`]]
+[[!$user_search_form]]
+[[!$admin_member_form]]
