@@ -1,0 +1,26 @@
+<div class="row parent-box-container hidden">
+    <div class="large-12 columns">
+        <fieldset>
+        <legend>Enter Parent Born Into Family:</legend>
+        <p class="large-12">To ensure that you are properly identified within the family tree please enter a parent's information below</p>
+        <p class="large-12">People married into the family do not need to enter in their parents information</p>
+        <div class="row">
+            <div class="large-4 small-4 columns">
+                [[!+fi.error.parentFName:notempty=`<span class="error">This is a required field.</span>`]]
+                <label>Parent's Birth First Name:</label> <input id="parentFName" class="inputField" type="text" name="parentFName" value="[[!+fi.parentFName]]"/>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="large-4 small-4 columns">
+                [[!+fi.error.parentLName:notempty=`<span class="error">This is a required field.</span>`]]
+                <label>Parent's Birth Last Name:</label> <input id="parentLName" class="inputField" type="text" name="parentLName" value="[[!+fi.parentLName]]"/>
+            </div>
+        </div>
+        
+        [[!$parentDobField]]
+        
+        </fieldset>
+    </div>
+</div>
+
