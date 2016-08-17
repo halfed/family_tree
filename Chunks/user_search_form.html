@@ -1,0 +1,23 @@
+[[!search_users]]
+<div id="formContainer" class="row">
+    <div class="columns">
+        <form id="memberSearch" action="[[~[[*id]]]]" method="POST" name="memberSearch">
+            <fieldset>
+                <legend>Search for a member</legend>
+                <div class="large-4">
+                    <label>Member First Name:</label> <input id="memberFirstName" class="inputField" type="text" name="memberFirstName" />
+                </div>
+                
+                <div class="large-4">
+                    <label>Member Last Name:</label> <input id="memberLastName" class="inputField" type="text" name="memberLastName" />
+                </div>
+                <div><input class="button tiny radius" type="submit" name="submit" value="Submit" /></div>
+
+                [[!+fi.memberList]]
+
+            </fieldset>
+        </form>
+        
+    </div>
+    
+</div>
