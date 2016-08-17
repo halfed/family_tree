@@ -1,0 +1,26 @@
+<!-- ! un-caches on call -->
+[[!admin_add_edit_kids]]
+<!-- p>insert_member]]</p -->
+
+[[!FormIt?
+   &hooks=`redirect`
+   &redirectTo=`12`
+   &validate=`parentFName:required,
+      parentLName:required,
+      parentDobDay:required:minLength=`1`,
+      parentDobMonth:required:minLength=`1`,
+      parentDobYear:required:minLength=`1`,
+      childFirstName:required,
+      childLastName:required,
+      childDobDay:required:minLength=`1`,
+      childDobMonth:required:minLength=`1`,
+      childDobYear:required:minLength=`1`,
+      childMemberGeneration:required`
+]]
+
+<div id="formContainer" class="row">
+    <div class="columns">
+        <p class="m-margin-top">Admin: Enter Child Information:</p>        
+        [[$admin_display_children_form]]
+    </div>
+</div>
