@@ -1,0 +1,97 @@
+<div class="se-pre-con"></div>
+<div id="formContainer" class="row"> 
+    <div class="large-4 columns s-margin-top">
+        <div class="registerMessage">[[!+reg.error.message]]</div>
+        <p>Please enter your information and check<br/> if we have a profile already set for you.</p>  
+        <form id="registrationForm" class="form" name="registrationForm" action="[[~[[*id]]]]" method="post">
+            <input type="hidden" name="nospam" value="[[!+reg.nospam]]" />
+            <input id="fullname" type="hidden" name="fullname" value="" />
+            
+            <div class="row">
+                <div class="large-8 small-8 columns">
+                    <label for="firstName"><b>Birth</b> First Name
+                        <span class="error">[[!+error.firstName]]</span>
+                     </label>
+                     <input type="text" name="firstName" id="firstName" value="[[+firstName]]" class="register_firstName"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-8 small-8 columns">
+                    <label for="lastName">Last Name
+                        <span class="error">[[!+error.lastName]]</span>
+                    </label>
+                    <input type="text" name="lastName" id="lastName" value="[[!+lastName]]" class="register_lastName" disabled/>
+                </div>
+            </div>
+    
+            [[!$dev_dobField]]
+    
+            <div class="row">
+                <div class="large-8 small-8 columns">
+                   <div class="form-buttons">
+                        <a id="checkMember" class="button small radius" name="checkMember">Search For Profile</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="register-continue">
+                <div class="row">
+                    <div class="large-8 small-8 columns">
+                        <label for="username">[[%register.username? &namespace=`login` &topic=`register`]]
+                            <span class="error">[[!+error.username]]</span>
+                        </label>
+                        <input type="text" name="username" id="username" value="[[!+reg.username]]" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-8 small-8 columns">
+                        <label for="password">[[%register.password]]
+                            <span class="error">[[!+error.password]]</span>
+                        </label>
+                        <input type="password" name="password" id="password" value="[[!+reg.password]]" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-8 small-8 columns">
+                        <label for="password_confirm">[[%register.password_confirm]]
+                            <span class="error">[[!+error.password_confirm]]</span>
+                        </label>
+                        <input type="password" name="password_confirm" id="password_confirm" value="[[!+reg.password_confirm]]" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-8 small-8 columns">
+                        <label for="email">[[%register.email]]
+                            <span class="error">[[!+error.email]]</span>
+                        </label>
+                        <input type="text" name="email" id="email" value="[[!+reg.email]]" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-8 small-8 columns">
+                        <div class="form-buttons">
+                            <input class="button small radius" type="submit" name="registerbtn" value="Register" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+    <div class="large-8 columns member-results-container left">
+        <p class="profile-results hidden">
+            These are the current profiles in our data base that are similar to you. Claim your profile if you feel this is the correct match. <br/> 
+            <b>Note:</b> Some information may not be correct. If you choose a profile you will be able to update your information after you register and sign in.
+        </p>
+        <div class="row divider-container">
+            <div class="small-3 columns">&nbsp;</div>
+            <div class="small-3 columns bottom-divider">Name</div>
+            <div class="small-3 columns bottom-divider">DOB</div>
+            <div class="small-3 columns bottom-divider">Parent</div>
+        </div>
+        <div class="member-results-body">
+            
+        </div>
+        <p class="profile-results hidden">If you feel that none of the results are you, please click <a href="#" class="continue-register">here</a> to continue registering</p>
+    </div>
+</div>
