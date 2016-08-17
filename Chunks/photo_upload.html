@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="large-5 small-5 columns">
+        [[!+fi.error.photo:notempty=`<span class="error">[[+fi.error.photo]]</span>`]]
+        <span class="disclaimer">Portrait/Vertical pictures only<br/></span>
+        <input type="file" name="fileToUpload" id="fileToUpload" class="inputField inputfile inputfile-6" onchange="readURL(this);" value="[[!+fi.photo]]"/>
+        <label class="inputLabel" for="fileToUpload"><span></span><strong>Select a file</strong></label>
+        
+        <p id="actions" style="display:none;">
+        	<button type="button" id="edit" class="button tiny radius">Edit</button>
+        	<button type="button" id="crop" class="button tiny radius">Crop</button>
+        </p>
+
+        <div id="result" class="result">
+            <p>This demo works only in browsers with support for the <a href="https://developer.mozilla.org/en/DOM/window.URL">URL</a> or <a href="https://developer.mozilla.org/en/DOM/FileReader">FileReader</a> API.</p>
+        </div>
+        
+        <img id="savedMemberPhoto" class="savedMemberPhoto hidden" name="memberPhoto" src="[[!+fi.memberPhoto]]"/>
+        
+        <input type="hidden" name="imageData" id="imageData" />
+    </div>
+</div>
