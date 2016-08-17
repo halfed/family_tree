@@ -1,0 +1,142 @@
+<div id="formContainer" class="row">
+    <div class="large-12 small-12 columns">
+    <p class="m-margin-top">Update Member Information:</p>
+    <form id="memberInput" action="[[~[[*id]]]]&uID=[[+modx.user.id]]" method="POST" name="memberInput" enctype="multipart/form-data" class="tests">
+        <input type="hidden" name="uId" value="[[!+fi.uId]]"/>
+
+        <div class="row">
+            <div class="large-4 small-4 columns">
+                <label>*First Name: (required)</label>
+                [[!+fi.error.firstName:notempty=`<span class="error">This is a required field.</span>`]]
+                <input id="firstName" class="inputField" type="text" name="firstName" value="[[!+fi.firstName]]"/>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="large-4 small-4 columns">
+                <label>*Last Name: (required)</label>
+                [[!+fi.error.lastName:notempty=`<span class="error">This is a required field.</span>`]]
+                <input id="lastName" class="inputField" type="text" name="lastName" value="[[!+fi.lastName]]"/>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class="large-4 small-4 columns">
+                <label>Middle Name:</label> <input id="middleName" class="inputField" type="text" name="middleName" value="[[!+fi.middleName]]"/>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="large-4 small-4 columns">
+                <label>Suffix:</label>
+                <input id="suffix" class="inputField" type="text" name="suffix" value="[[!+fi.suffix]]"/>
+            </div>
+        </div>
+        
+        <div class="row">
+           <div class="large-4 small-4 columns">
+                <label>Nick Name:</label>
+                <input class="inputField" type="text" name="nickName" value="[[!+fi.nickName]]"/>
+            </div> 
+        </div>
+        
+
+        <div class="row">
+            <div class="large-4 small-4 columns">
+                <label>Gender:</label>
+                <select name="gender" id="gender" class="leadFields">
+                    <option value="" [[!+fi.gender:FormItIsSelected=``]]>SELECT</option>
+                    <option value="male" [[!+fi.gender:FormItIsSelected=`male`]]>Male</option>
+                    <option value="female" [[!+fi.gender:FormItIsSelected=`female`]]>Female</option>
+                </select>
+            </div>
+        </div>
+        
+        [[!$dobField]]
+
+        <div class="row">
+            <div class="large-4 small-4 columns">
+                <label>*Email: (required)</label>
+                [[!+fi.error.email:notempty=`<span class="error">This is a required field.</span>`]]
+                <input id="email" class="inputField" type="text" name="email" value="[[!+fi.email]]"/>
+            </div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="large-4 small-4 columns">
+                <label>Birth City:</label>
+                <input id="birthCity" class="inputField" type="text" name="birthCity" value="[[!+fi.birthCity]]"/>
+            </div>
+        </div>
+        
+        [[!$birth_state]]
+
+        [[!$member_generation]]
+
+        <div>
+            <label>Born into family?</label>
+            <input id="bornIntoFamily" class="inputField" type="checkbox" name="bornIntoFamily" value="1" [[!+fi.bornIntoFamily:FormItIsChecked=`1`]]/>
+        </div>
+        [[!$parent_box]]
+
+        [[!$spouseBox]]
+
+        <div class="row">
+            <div class="large-4 memberImage small-4 columns">
+                <!--label>Member Image (Large):</label--> 
+                <input id="memberImage" class="inputField" type="text" name="memberImage" value="[[!+fi.memberImage]]"/>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="large-4 small-4 columns"><label>Phone:</label> <input id="phone" class="inputField" type="text" name="phone" value="[[!+fi.phone]]"/></div>
+        </div>
+        
+        <div class="row">
+            <div class="large-4 small-4 columns"><label>Current City:</label> <input id="currentCity" class="inputField" type="text" name="currentCity" value="[[!+fi.currentCity]]"/></div>
+        </div>
+        
+        [[!$current_state]]
+        
+        <div class="row">
+            <div class="large-4 small-4 columns"><label>College:</label> <input id="college" class="inputField" type="text" name="college" value="[[!+fi.college]]"/></div>
+        </div>
+        
+        [[!$occupationSelect]]
+        
+        <div class="row">
+            <div class="large-4 small-4 columns">
+                <label>Facebook: <span data-tooltip aria-haspopup="true" class="has-tip" title="Paste your Facebook profile link in this field"><img src="http://familytree.deslogefamily.com/family-tree/modx/assets/images/small-images/question_mark_tooltip.png" width="16" height="16"></span></label>
+                <input id="faceBook" class="inputField" type="text" name="faceBook" value="[[!+fi.faceBook]]"/>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="large-4 small-4 columns">
+                <label>LinkedIn: <span data-tooltip aria-haspopup="true" class="has-tip" title="Paste your Linkedin profile link in this field"><img src="http://familytree.deslogefamily.com/family-tree/modx/assets/images/small-images/question_mark_tooltip.png" width="16" height="16"></span></label> 
+                <input id="linkedIn" class="inputField" type="text" name="linkedIn" value="[[!+fi.linkedIn]]"/>
+            </div>
+        </div>
+        
+        <div class="large-4">
+            <label>Other Website or Social Profile:</label> 
+            <input id="website" class="inputField" type="text" name="website" value="[[!+fi.website]]" />
+        </div>
+        
+        <div class="large-4">
+            <label>About Me: (250 character limit)</label> 
+            <textarea name="aboutMe" id="aboutMe" rows="10" cols="60" maxlength="1000">[[!+fi.aboutMe]]</textarea>
+        </div>
+        
+
+        [[!$photo_upload]]
+        
+        <div class="row">
+           <div class="large-4 small-4 columns"><input class="button small radius" type="submit" name="submit" value="Submit" /></div> 
+        </div>
+        
+    </form>
+</div>
