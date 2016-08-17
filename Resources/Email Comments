@@ -1,0 +1,18 @@
+[[!FormIt?
+   &hooks=`email`
+   &emailTpl=`admin_comments_email_Tpl`
+   &emailFrom=`donotreply@familytree.deslogefamily.com`
+   &emailTo=`flc@watlow.com`
+   &emailCC=`nick.haggerty@gmail.com`
+   &emailCCName=`Nick Haggerty`
+   &emailSubject=`RE: Admin asisstance/questions`
+   &validate=`firstname:required:regexp=^/[\w\W\-]/^,
+              lastname:required:regexp=^/[\w\W\-]/^,
+              email:required:email`
+   &redirectTo=`16`
+   &successMessagePlaceholder=`fi.successMessage`
+   &successMessage= `Thank you for your feedback, an Administrator will respond promptly`
+]]
+
+[[!+fi.successMessage:notempty=`<div class="row"><div class="small-8 small-centered columns"><p class="success">[[+fi.successMessage]]</p></div></div>`]]
+[[!$email_comments]]
