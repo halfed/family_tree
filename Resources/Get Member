@@ -1,0 +1,22 @@
+[[!check_session]]
+[[!get_member]]
+[[!update_member]]
+
+[[!FormIt?
+   &redirectTo=`3`
+   &redirectParams=`{"uID":"[[!+modx.user.id]]"}`
+   &validate=`firstName:required:regexp=^/[\w\W\-]/^,
+      lastName:required:regexp=^/[\w\W\-]/^,
+      dobDay:required:minLength=`1`,
+      dobMonth:required:minLength=`1`,
+      dobYear:required:minLength=`1`,
+      email:required:email,
+      memberGeneration:required:isNumber,
+      photo:validateUpload=^1^`
+      &customValidators=`validateUpload`
+      &successMessagePlaceholder=`fi.successMessage`
+      &successMessage= `Your profile has been successfully updated`
+]]
+
+[[!+fi.successMessage:notempty=`<div class="row"><div class="small-8 small-centered columns"><p class="success">[[+fi.successMessage]]</p></div></div>`]]
+[[!$member_profile_form]]
