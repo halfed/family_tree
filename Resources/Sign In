@@ -1,0 +1,7 @@
+[[!add_cookie]]
+[[!check_continuing_user]]
+<div id="logIn" class="row">
+    <div class="registerMessage">[[!+reg.error.message]]</div>
+    [[!Login? &loginResourceId=`1`]]
+    [[$footer]]
+</div>
