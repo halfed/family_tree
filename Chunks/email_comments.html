@@ -1,0 +1,67 @@
+
+<div class="row">
+    <div class="large-6 small-6 columns">
+        <p>Have a question or concern regarding the family tree or your member profile?<br/>
+            Provide us with the following information and we will get back to you soon.
+        </p>
+        <form id="emailAdminForm" class="form" name="emailAdminForm" action="[[~[[*id]]]]" method="post">
+ 
+            <label for="firstname">First Name: (required)</label>
+            [[!+fi.error.firstname:notempty=`<span class="error">This is a required field.</span>`]]
+            <input type="text" name="firstname" id="firstname" value="[[!+fi.firstname]]">
+            
+            <label for="lastname">Last Name: (required)</label>
+            [[!+fi.error.lastname:notempty=`<span class="error">This is a required field.</span>`]]
+            <input type="text" name="lastname" id="lastname" value="[[!+fi.lastname]]">
+         
+            <label for="email">Email: (required)</label>
+            [[!+fi.error.email:notempty=`<span class="error">This is a required field.</span>`]] 
+            <input type="text" name="email" id="email" value="[[!+fi.email]]">
+            
+            <div class="row">
+                <div class="small-12 columns">
+                    <label class="checkbox-label"><input type="checkbox" name="more_info" id="more_info" [[!+fi.more_info]]> <span>If you are having issues with the site, please check the box for more information</span></label>
+                </div>
+            </div> 
+            
+            <div class="row additional-info hidden">
+                <div class="small-5 large-5 columns">
+                    <label>Operation system type?</label>
+                    <select name="operating_system" id="operating_system"  class="leadFields" >
+                        <option value="" [[!+fi.operating_system:FormItIsSelected=``]]>SELECT</option>
+                        <option value="PC" [[!+fi.operating_system:FormItIsSelected=`PC`]]>PC</option>
+                        <option value="MAC" [[!+fi.operating_system:FormItIsSelected=`MAC`]]>MAC</option>
+                        <option value="Tablet" [[!+fi.operating_system:FormItIsSelected=`Tablet`]]>Tablet</option>
+                        <option value="Mobile" [[!+fi.operating_system:FormItIsSelected=`Mobile`]]>Mobile</option>
+                        <option value="Other" [[!+fi.operating_system:FormItIsSelected=`Other`]]>Other</option>
+                    </select>
+                    
+                    <label>What browser were you in?</label>
+                    <select name="browser" id="browser" class="leadFields">
+                        <option value="" [[!+fi.browser:FormItIsSelected=``]]>SELECT</option>
+                        <option value="FireFox" [[!+fi.browser:FormItIsSelected=`FireFox`]]>FireFox</option>
+                        <option value="Internet Explorer" [[!+fi.browser:FormItIsSelected=`Internet Explorer`]]>Internet Explorer</option>
+                        <option value="Opera" [[!+fi.browser:FormItIsSelected=`Opera`]]>Opera</option>
+                        <option value="Chrome" [[!+fi.browser:FormItIsSelected=`Chrome`]]>Chrome</option>
+                        <option value="Safari" [[!+fi.browser:FormItIsSelected=`Safari`]]>Safari</option>
+                        <option value="Other" [[!+fi.browser:FormItIsSelected=`Other`]]>Other</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+            <label for="comment">Describe the Issue, (Feedback on App or New Features you would like)</label>
+            
+            <textarea name="comment" id="comment" cols="30" rows="10">[[!+fi.comment]]</textarea>
+         
+            <div class="row">
+                <div class="large-8 small-8 columns">
+                    <div class="form-buttons">
+                        <input id="email-admin" class="button small radius" type="submit" name="email-admin" value="Submit" />
+                    </div>
+                </div>
+            </div>
+     
+        </form>
+    </div>
+</div>
