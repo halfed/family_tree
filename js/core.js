@@ -280,41 +280,6 @@ jQuery(document).ready(function() {
             form.submit();
         }
     });
-    
-    jQuery("#memberInputss").validate({
-       rules: {
-           firstName: "required",
-           lastName: "required",
-           dobMonth: "required",
-           dobDay: "required",
-           dobYear: "required",
-           memberGeneration: "required",
-           email: {
-               required: true,
-               email: true
-           }
-       },
-        submitHandler: function(form) {
-            var birthDate = new GetBirthDates('dobDay', 'dobMonth', 'dobYear', 'dob');
-            birthDate.convertBirthDates();
-            
-            var deathDate = new GetBirthDates('dodDay', 'dodMonth', 'dodYear', 'dod');
-            deathDate.convertBirthDates();
-            
-            var parentBirthDate = new GetBirthDates('parentDobDay', 'parentDobMonth', 'parentDobYear', 'parentDob');
-            parentBirthDate.convertBirthDates();
-            
-            var childBirthDate = new GetBirthDates('childDobDay', 'childDobMonth', 'childDobYear', 'childDob');
-            childBirthDate.convertBirthDates();
-            
-            var spouseBirthDate = new GetBirthDates('spouseDobDay', 'spouseDobMonth', 'spouseDobYear', 'spouseDob');
-            spouseBirthDate.convertBirthDates();
-            
-            
-            form.submit();
-        }
-    });
-    
    
     jQuery("#searchForm").validate({
         debug: false,
