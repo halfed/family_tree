@@ -1,0 +1,25 @@
+<!-- ! un-caches on call -->
+[[!check_session]]
+[[!display_kids]]
+[[!edit_kids]]
+
+[[!FormIt?
+   &hooks=`redirect`
+   &redirectTo=`11`
+   
+   &validate=`firstName:required:regexp=^/[a-zA-Z]/^,
+      lastName:required:regexp=^/[a-zA-Z]/^,
+      dobDay:required:minLength=`1`,
+      dobMonth:required:minLength=`1`,
+      dobYear:required:minLength=`1`,
+      photo:validateUpload=^1^`
+   &customValidators=`validateUpload`
+]]
+
+<div id="formContainer" class="row">
+    <div class="columns">
+        <p class="m-margin-top">Enter Child Information:</p>
+        [[!$display_children]]          
+        [[!$display_children_form]]
+    </div>
+</div>
