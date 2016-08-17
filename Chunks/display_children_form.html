@@ -1,0 +1,51 @@
+
+<div class="row">
+<div class="columns">
+<form id="memberInput" action="[[~[[*id]]]]" method="POST" name="memberInput" enctype="multipart/form-data">
+<fieldset>
+<legend>Add/Edit Child</legend>
+<input type="hidden" name="parentModxId" value="[[!+modx.user.id]]"/>
+<input type="hidden" name="parentId" value="[[!+fi.parentId]]"/>
+<input type="hidden" name="childId" value="[[!+fi.childId]]"/>
+
+<div class="large-4">
+    <label>*Child Birth First Name: (required)</label>
+    [[!+fi.error.firstName:notempty=`<span class="error">This is a required field.</span>`]]
+    <input id="firstName" class="inputField" type="text" name="firstName" value="[[!+fi.firstName]]"/>
+</div>
+
+<div class="large-4">
+    <label>Child Birth Last Name: (required)</label>
+    [[!+fi.error.lastName:notempty=`<span class="error">This is a required field.</span>`]]
+    <input id="lastName" class="inputField" type="text" name="lastName" value="[[!+fi.lastName]]"/>
+</div>
+<div class="large-4"><label>Child Birth Middle Name:</label> <input id="middleName" class="inputField" type="text" name="middleName" value="[[!+fi.middleName]]"/></div>
+<div class="large-4"><label>Suffix:</label> <input id="suffix" class="inputField" type="text" name="suffix" value="[[!+fi.suffix]]"/></div>
+<div class="large-4"><label>Nick Name:</label> <input class="inputField" type="text" name="nickName" value="[[!+fi.nickName]]"/></div>
+<div class="large-4">
+    <label>Gender:</label>
+    <select name="gender" id="gender" class="leadFields">
+        <option value="" [[!+fi.gender:FormItIsSelected=``]]>SELECT</option>
+        <option value="male" [[!+fi.gender:FormItIsSelected=`male`]]>Male</option>
+        <option value="female" [[!+fi.gender:FormItIsSelected=`female`]]>Female</option>
+    </select>
+</div>
+[[!$dobField]]
+
+<div class="large-4"><label>Birth City:</label> <input id="birthCity" class="inputField" type="text" name="birthCity" value="[[!+fi.birthCity]]"/></div>
+[[!$birth_state]]
+
+<div class="row">
+    <div class="large-4 memberImage small-4 columns">
+        <!--label>Member Image (Large):</label--> 
+        <input id="memberImage" class="inputField" type="text" name="memberImage" value="[[!+fi.memberImage]]"/>
+    </div>
+</div>
+
+[[!$photo_upload]]
+
+<div><input class="button small radius" type="submit" name="submit" value="Submit" /></div>
+</fieldset>
+</form>
+</div>
+</div>
