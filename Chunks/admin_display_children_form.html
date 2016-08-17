@@ -1,0 +1,59 @@
+<div class="row">
+<div class="columns">
+<form id="memberInput" action="[[~[[*id]]]]" method="POST" name="memberInput">
+
+<fieldset>
+<legend>Enter Parent Born Into Family:</legend>
+<div class="large-4">
+
+
+<label>Parent's Birth First Name:</label>
+[[!+fi.error.parentFName:notempty=`<span class="error">This is a required field.</span>`]]
+<input id="parentFName" class="inputField" type="text" name="parentFName" />
+</div>
+
+<div class="large-4">
+
+<label>Parent's Birth Last Name:</label>
+[[!+fi.error.parentLName:notempty=`<span class="error">This is a required field.</span>`]]
+<input id="parentLName" class="inputField" type="text" name="parentLName" />
+</div>
+
+[[!$parentDobField]]
+
+</fieldset>
+
+
+<div class="large-4">
+<label>Child Birth First Name:</label> 
+[[!+fi.error.childFirstName:notempty=`<span class="error">This is a required field.</span>`]]
+<input id="childFirstName" class="inputField" type="text" name="childFirstName" />
+</div>
+
+<div class="large-4">
+<label>Child Birth Last Name:</label>
+[[!+fi.error.childLastName:notempty=`<span class="error">This is a required field.</span>`]]
+<input id="childLastName" class="inputField" type="text" name="childLastName" />
+    
+</div>
+<div class="large-4"><label>Child Birth Middle Name:</label> <input id="childMiddleName" class="inputField" type="text" name="childMiddleName" /></div>
+<div class="large-4"><label>Suffix:</label> <input id="childSuffix" class="inputField" type="text" name="childSuffix" /></div>
+<div class="large-4"><label>Nick Name:</label> <input id="childNickName" class="inputField" type="text" name="childNickName" /></div>
+
+[[!$childDobField]]
+
+<div class="large-4"><label>Birth City:</label> <input id="childBirthCity" class="inputField" type="text" name="childBirthCity" /></div>
+<div class="large-4"><label>Birth State:</label> <input id="childBirthState" class="inputField" type="text" name="childBirthState" /></div>
+
+<div class="large-4">
+
+<label>Member Generation:</label> 
+[[!+fi.error.childMemberGeneration:notempty=`<span class="error">This is a required field.</span>`]]
+<input id="childMemberGeneration" class="inputField" type="text" name="childMemberGeneration" /></div>
+
+<div class="large-4"><label>Member Image:</label> <input id="childMemberImage" class="inputField" type="text" name="childMemberImage" /></div>
+
+<div><input class="button small radius" type="submit" name="submit" value="Submit" /></div>
+</form>
+</div>
+</div>
