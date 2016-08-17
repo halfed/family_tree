@@ -1,0 +1,54 @@
+<div id="formContainer" class="row">
+    <div class="large-12 columns">
+        <form id="searchForm" class="form" name="searchForm" action="[[~[[*id]]]]" method="post">
+            <div class="row">
+                <div class="large-4 columns searchMessage"></div>
+            </div>
+            <div class="row">
+                <div class="large-4 small-4 columns">
+                    <label for="searchFirstName"><b>Birth</b> First Name
+                     </label>
+                     <input type="text" name="searchFirstName" id="searchFirstName" class="search_member searchFirstName"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-4 small-4 columns">
+                    <label for="searchLastName">Last Name
+                    </label>
+                    <input type="text" name="searchLastName" id="searchLastName" class="search_member"/>
+                </div>
+            </div>
+            
+            [[!$current_state]]
+            
+            [[!$search_member_generation]]
+            
+            <div class="row">
+                <div class="large-4 small-4 columns">
+                    <label for="searchCollege">College
+                    </label>
+                    <input type="text" name="searchCollege" id="searchCollege" class="search_member"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-4 small-4 columns">
+                    <label for="searchOccupation">Occupation
+                    </label>
+                    <input type="text" name="searchOccupation" id="searchOccupation" value="" class="search_member"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-4 small-4 columns">
+                    <div class="form-buttons">
+                        <input class="button small radius" type="submit" name="serchbtn" value="Search" />
+                    </div>
+                </div>
+            </div>
+        </fom>
+    </div>
+    <div class="row">
+        <div class="large-12 columns searchResults">
+            
+        </div>
+    </div>
+</div>
